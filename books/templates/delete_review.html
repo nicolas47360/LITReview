@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            <div class="ticket"></div>
+                <div>Livre/Article</div>
+                    <div>
+                        <h2>Titre</h2>
+                        {{ form_ticket.title }}
+                    </div>
+                    <div>
+                        <h2>Description</h2>
+                        {{ form_ticket.description }}
+                    </div>
+                     <div>
+                        <h2>Image</h2>
+                        {{ form_ticket.image }}
+                    </div>
+            <div class="critique"></div>
+                <div>
+                    <h2>Titre</h2>
+                    {{ form_review.headline}}
+                </div>
+                <div>
+                    <h2>Note</h2>
+                    {{ form_review.rating}}
+                </div>
+                 <div>
+                    <h2>Commentaire</h2>
+                    {{ form_review.body }}
+                </div>
+
+            <button type="submit">Envoyer</button>
+
+        </form>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LITReview</title>
+</head>
+<body>
+  <h1>LITReview</h1>
+
+  {% if user.is_authenticated %}
+  <div>
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a href="">Flux</a>
+                </li>
+                <li>
+                    <a href="">Posts</a>
+                </li>
+                <li>
+                    Abonnements
+                </li>
+                <li>
+                    <a href="{% url 'logout' %}">Se déconnecter</a>
+                </li>
+            </ul>
+            {% endif %}
+        </nav>
+  </div>
+{% block content %}{% endblock content %}
+
+
+</body>
+</html>

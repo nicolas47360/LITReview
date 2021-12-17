@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div>
+        <button type="submit"><a href="{% url 'ticket' %}">Demander une critique</a>
+        </button>
+        <button type="submit"><a href="{% url 'create_review' %}">Créer une critique</a>
+        </button>
+    </div>
+
+{% endblock %}
